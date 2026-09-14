@@ -122,7 +122,7 @@ export const rsvp = {
   eyebrow: 'Confirmación',
   title: 'Acompáñennos',
   description:
-    'Les pedimos confirmar su asistencia antes del 10 de enero de 2027 para poder organizar cada detalle con cariño.',
+    'Busca tu nombre completo o el apellido de tu familia para confirmar su asistencia antes del 10 de enero de 2027.',
   deadline: '10 de enero de 2027',
 }
 

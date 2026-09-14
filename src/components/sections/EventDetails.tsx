@@ -1,6 +1,9 @@
+import { motion } from 'framer-motion'
 import { events, dressCode, couple } from '../../data/wedding'
 import { SectionReveal } from '../ui/SectionReveal'
 import { Divider, Ornament } from '../ui/Divider'
+
+const wipeEase = [0.76, 0, 0.24, 1] as const
 
 export function EventDetails() {
   return (
@@ -22,7 +25,13 @@ export function EventDetails() {
           {events.map((event, i) => (
             <SectionReveal key={event.id} delay={i * 0.15}>
               <div className="group flex flex-col items-center text-center">
-                <div className="relative mb-8 h-72 w-full max-w-sm overflow-hidden">
+                <motion.div
+                  className="relative mb-8 h-72 w-full max-w-sm overflow-hidden"
+                  initial={{ clipPath: 'inset(0 0 100% 0)' }}
+                  whileInView={{ clipPath: 'inset(0 0 0% 0)' }}
+                  viewport={{ once: true, margin: '-10% 0px' }}
+                  transition={{ duration: 1.1, ease: wipeEase }}
+                >
                   <img
                     src={event.image}
                     alt={event.venue}
@@ -30,7 +39,7 @@ export function EventDetails() {
                     className="h-full w-full object-cover grayscale-[15%] transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-alba-ink/10" />
-                </div>
+                </motion.div>
 
                 <p className="font-body text-[11px] uppercase tracking-[0.35em] text-alba-muted">
                   {event.time}

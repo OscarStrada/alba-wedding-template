@@ -7,6 +7,7 @@ import { OurStory } from './components/sections/OurStory'
 import { Gallery } from './components/sections/Gallery'
 import { GiftRegistry } from './components/sections/GiftRegistry'
 import { RSVP } from './components/sections/RSVP'
+import { SignatureReveal } from './components/ui/SignatureReveal'
 
 export default function App() {
   useLenis()
@@ -16,6 +17,7 @@ export default function App() {
       <Navigation />
       <main>
         <Hero />
+        <SignatureReveal />
         <EventDetails />
         <OurStory />
         <Gallery />
