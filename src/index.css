@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #efeae0;
+  --ink: #1b1a17;
+  --line: #c9c2b3;
+  --muted: #8b8578;
+  --paper: #f6f3ec;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+/* Thin, elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Word-reveal animation primitives used by AnimatedText */
+.word-wrap {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+.word {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Lenis smooth scroll helper classes */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Hide horizontal scrollbar for the gallery drag strip */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
