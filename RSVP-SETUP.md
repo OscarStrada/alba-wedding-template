@@ -24,8 +24,7 @@ a una hoja de Google real, sigue estos pasos:
    | E | Familia (apellido con el que se agrupa la invitación) |
    | F | Acompañante (cupo asignado, número) |
    | G | Asistirá (se llena solo — "Sí" / "No") |
-   | H | (sin usar) |
-   | I | Niños (cupo asignado, número) |
+   | H | Niños (cupo asignado, número) |
 
 ## 2. Despliega el backend (Google Apps Script)
 
